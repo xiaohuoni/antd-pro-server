@@ -2,9 +2,9 @@
   "name": "antd-pro-server",
   "version": "1.0.0",
   "description": "ant,umi,antd-pro",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon app.js"
   },
   "keywords": [
     "ant",
@@ -14,11 +14,22 @@
   ],
   "author": "xiaohuoni",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohuoni/antd-pro-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xiaohuoni/antd-pro-server/issues"
+  },
+  "homepage": "https://github.com/xiaohuoni/antd-pro-server#readme",
   "dependencies": {
     "express": "^4.16.3",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.22.1",
     "morgan": "^1.9.0",
     "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3"
   }
 }
