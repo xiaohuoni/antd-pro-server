@@ -1,10 +1,10 @@
 var express = require("express");
 var morgan = require('morgan')
-var proxyData = require("./proxy");
+var {resData} = require("./lib/proxy");
 var app = express();
 app.use(morgan('combined'))
 app.use((req, res) => {
-  var result = proxyData[req.method][req.url];
+  var result = resData[req.method][req.url];
   if (Object.prototype.toString.call(result) === "[object String]"||Object.prototype.toString.call(result) === "[object Array]") {
     res.json(result)
   } else if (Object.prototype.toString.call(result) === "[object Function]") {

@@ -1,11 +1,11 @@
 const  mockjs = require('mockjs') ;
-const { getRule, postRule } = require('./mock/rule');
-const { getActivities, getNotice, getFakeList }= require('./mock/api');
-const { getFakeChartData }= require('./mock/chart');
-const { getProfileBasicData }= require('./mock/profile');
-const { getProfileAdvancedData }= require('./mock/profile');
-const { getNotices } =require('./mock/notices');
-const { format, delay } =require('./utils/roadhog-api-doc-util');
+const { getRule, postRule } = require('./rule');
+const { getActivities, getNotice, getFakeList }= require('./api');
+const { getFakeChartData }= require('./chart');
+const { getProfileBasicData }= require('./profile');
+const { getProfileAdvancedData }= require('./profile');
+const { getNotices } =require('./notices');
+const { format, delay } =require('../utils/roadhog-api-doc-util');
 
 // 代码中会兼容本地 service mock 以及部署站点的静态数据
 const proxy = {
@@ -169,4 +169,4 @@ Object.keys(mockData).forEach(function(key) {
   // }
 });
 
-module.exports = resData;
+module.exports = {resData,proxyEnd};

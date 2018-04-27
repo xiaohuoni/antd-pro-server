@@ -2,9 +2,10 @@
   "name": "antd-pro-server",
   "version": "1.0.0",
   "description": "ant,umi,antd-pro",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "nodemon app.js",
+    "build": "rm -rf lib && babel mock --out-dir lib"
   },
   "keywords": [
     "ant",
@@ -30,6 +31,24 @@
     "url": "^0.11.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "nodemon": "^1.17.3"
+  },
+  "files": [
+    "lib",
+    "utils"
+  ],
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "add-module-exports",
+      "transform-runtime"
+    ]
   }
 }
