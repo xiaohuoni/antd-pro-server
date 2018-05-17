@@ -38,7 +38,7 @@ import proxy from "antd-pro-server";
 export default proxy;
 ```
 
-### 支持扩展配置
+#### 支持扩展配置
 
 ```js
 import antdServer from "antd-pro-server";
@@ -56,21 +56,8 @@ export default { ...proxy, ...antdServer };
 ```json
 [{"code":"success","message":"成功"}]
 ```
-### 支持环境配置
-```js
-import antdServer from 'antd-pro-server';
-// // 是否禁用代理
-const noProxy = process.env.NO_PROXY === 'true';
-const proxy = {
-  'GET /api/test': [
-    {
-      code:'success',
-      message:'成功'
-    },
-  ],
-};
-export default (noProxy ? {} : {...proxy,...antdServer});
-```
+#### 支持环境配置 是否禁用
+
 ```base
-cross-env NO_PROXY=true umi dev
+cross-env MOCK=none umi dev
 ```
