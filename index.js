@@ -1,2 +1,2 @@
-var {proxyEnd} = require("./lib/proxy");
+var {proxyEnd} = require("./mock/proxy");
 module.exports = proxyEnd;
