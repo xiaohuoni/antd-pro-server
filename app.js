@@ -1,6 +1,6 @@
 var express = require("express");
 var morgan = require('morgan')
-var {resData} = require("./lib/proxy");
+var {resData} = require("./proxy");
 var app = express();
 app.use(morgan('combined'))
 app.use((req, res) => {
